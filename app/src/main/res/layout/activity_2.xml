@@ -7,10 +7,12 @@
     android:orientation="vertical"
     android:fitsSystemWindows="true">
 
-    <!-- Element 1: IP Config -->
     <TextView
-        android:id="@+id/ipConfigTextView"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="IP Config"/>
+        android:layout_margin="5dp"
+        app:domainTitle="Signal Levels"
+
+        android:text="Text View"/>
 </ScrollView>

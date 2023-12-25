@@ -36,8 +36,14 @@ android {
     buildFeatures {
         viewBinding = true
     }
-
-    val packagingOptionsPath = setOf("META-INF/AL2.0", "META-INF/LGPL2.1", "META-INF/LICENSE", "META-INF/NOTICE.txt","META-INF/NOTICE", "META-INF/**")
+    val packagingOptionsPath = setOf(
+        "META-INF/AL2.0",
+        "META-INF/LGPL2.1",
+        "META-INF/LICENSE",
+        "META-INF/NOTICE.txt",
+        "META-INF/NOTICE",
+        "META-INF/**"
+    )
     packagingOptions.setExcludes(packagingOptionsPath)
 }
 dependencies {
@@ -50,9 +56,14 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    compileOnly("org.projectlombok:lombok:1.18.30")
 
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.16.0")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.0")
-    
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0") // Hoặc sử dụng Retrofit
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.12.0")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.0")
+    implementation("com.google.code.gson:gson:2.10.1")
+
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    implementation("com.github.madrapps:plot:0.1.1")
+    implementation("com.androidplot:androidplot-core:1.5.10")
 }
