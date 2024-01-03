@@ -4,25 +4,20 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
-import android.net.NetworkCapabilities;
-import android.net.NetworkInfo;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.ftel.demo.dto.WifiInfo;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
-
-import lombok.Getter;
-import lombok.Setter;
 
 /*import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -32,14 +27,14 @@ import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;*/
 
-public class Activity_2 extends AppCompatActivity {
+public class ScanWifiActivity extends AppCompatActivity {
     private TextView textView;
     private ConnectivityManager connectivityManager;
     private WifiManager wifiManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_2);
+        setContentView(R.layout.activity_scanwifi);
 
         textView = findViewById(R.id.textView);
         connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -64,13 +59,6 @@ public class Activity_2 extends AppCompatActivity {
     private void scanWifiAndShowResults() {
         WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         ArrayList<ScanResult> scanResults = (ArrayList<ScanResult>) wifiManager.getScanResults();
@@ -83,8 +71,9 @@ public class Activity_2 extends AppCompatActivity {
 
             data.add(wifiInfo);
         }
-        textView.setText(gson.toJson(data));
-
+        //textView.setText(gson.toJson(data));
+        textView.setText(gson.toJson(scanResults));
+        Log.i("RESULT: ",gson.toJson(scanResults));
     }
 
     public static class DataInfo {

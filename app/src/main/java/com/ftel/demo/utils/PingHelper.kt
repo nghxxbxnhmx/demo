@@ -1,4 +1,4 @@
-package com.ftel.demo.util
+package com.ftel.demo.utils
 
 import com.ftel.demo.dto.PingResult
 import java.io.IOException
@@ -6,7 +6,7 @@ import java.net.InetAddress
 
 import java.net.InetSocketAddress
 
-class PingUtil(private val ipAddress: String) {
+class PingHelper(private val ipAddress: String) {
     fun sendPing(ttl: Int, timeout: Int, packetSize: Int) : PingResult {
         val result = PingResult()
 

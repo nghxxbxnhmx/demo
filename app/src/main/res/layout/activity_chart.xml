@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:padding="10dp"
-    tools:context=".Activity_Chart">
+    tools:context=".ChartActivity">
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barchart"
