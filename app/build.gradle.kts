@@ -102,4 +102,8 @@ dependencies {
 
     // implementation("com.github.akinaru:speedtest:1.23")
 
+    //nslookup library
+    implementation("dnsjava:dnsjava:3.5.3")
+
+
 }

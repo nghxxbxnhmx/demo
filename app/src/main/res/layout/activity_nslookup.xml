@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Start Button -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Start"
+        android:layout_marginTop="16dp" />
+
+    <!-- Domain Name Input -->
+    <TextView
+        android:id="@+id/domainLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startButton"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Domain Name" />
+
+    <EditText
+        android:id="@+id/domainEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/domainLabel"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter domain name" />
+
+    <!-- DNS Server Input -->
+    <TextView
+        android:id="@+id/dnsServerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/domainEditText"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="DNS Server" />
+
+    <EditText
+        android:id="@+id/dnsServerEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dnsServerLabel"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Default 8.8.8.8" />
+
+    <!-- Result ListView -->
+    <ListView
+        android:id="@+id/resultListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dnsServerEditText"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
