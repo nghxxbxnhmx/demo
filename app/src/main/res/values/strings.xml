@@ -137,4 +137,6 @@
     <string name="title_activity_main_board">Activity_Main_Board</string>
     <string name="title_activity_tracert">Activity_Tracert</string>
     <string name="title_activity_speed_test">ActivitySpeedTest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

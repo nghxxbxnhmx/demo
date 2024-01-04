@@ -1,4 +1,4 @@
-package com.ftel.demo.adapter
+package com.ftel.demo.adapters
 
 import android.view.LayoutInflater
 import android.view.View

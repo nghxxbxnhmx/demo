@@ -1,19 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ap="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:padding="10dp"
-    tools:context=".ChartActivity">
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/tab_background">
+
+        <RadioButton
+            android:id="@+id/radio_2_4GHz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:background="@drawable/tab_indicator_selected"
+            android:text="2.4GHz"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radio_5GHz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/tab_indicator_selected"
+            android:text="5GHz"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barchart"
         style="@style/FullScreenGraph"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        ap:backgroundColor="#FFFFFF"/>
-
+        android:layout_below="@+id/radioGroup"
+        app:backgroundColor="#FFFFFF" />
 </RelativeLayout>
