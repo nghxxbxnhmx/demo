@@ -94,6 +94,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        nsLookupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), NsLookupActivity.class));
+            }
+        });
+
 
     }
     private void applyGradient(Button button, String startColor, String endColor) {

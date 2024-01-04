@@ -86,7 +86,8 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:text="NsLookup"/>
 
         <Button
             android:id="@+id/speedTestButton"
