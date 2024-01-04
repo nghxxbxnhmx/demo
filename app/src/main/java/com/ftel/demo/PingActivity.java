@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ftel.demo.adapter.PingAdapter;
+import com.ftel.demo.adapters.PingAdapter;
 import com.ftel.demo.dto.PingResult;
 import com.ftel.demo.utils.PingHelper;
 
