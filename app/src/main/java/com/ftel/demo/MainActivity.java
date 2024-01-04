@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button pingButton, testButton, chartButton, wifiInfoButton, tracertButton, pageLoadTimerButton, nsLookupButton, speedTestButton;
+    private Button pingButton, testButton, chartButton, wifiInfoButton, tracertButton, pageLoadTimerButton, nsLookupButton, speedTestButton, portScanButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         pageLoadTimerButton = findViewById(R.id.pageLoadTimerButton);
         nsLookupButton = findViewById(R.id.nsLookupButton);
         speedTestButton = findViewById(R.id.speedTestButton);
-
+        portScanButton = findViewById(R.id.portScanButton);
 
         applyGradient(pingButton, "#1DB954", "#191414");
         applyGradient(testButton, "#1DB954", "#191414");
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         applyGradient(pageLoadTimerButton, "#1DB954", "#191414");
         applyGradient(nsLookupButton, "#1DB954", "#191414");
         applyGradient(speedTestButton, "#1DB954", "#191414");
-
+        applyGradient(portScanButton, "#1DB954", "#191414");
 
         pingButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,6 +101,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        nsLookupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), NsLookupActivity.class));
+            }
+        });
+
+        portScanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PortScanActivity.class));
+            }
+        });
 
     }
     private void applyGradient(Button button, String startColor, String endColor) {
