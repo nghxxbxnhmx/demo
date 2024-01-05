@@ -66,5 +66,4 @@
             android:name=".NsLookupActivity"
             android:exported="false" />
     </application>
-
 </manifest>
