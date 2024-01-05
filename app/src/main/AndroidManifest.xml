@@ -65,5 +65,8 @@
         <activity
             android:name=".NsLookupActivity"
             android:exported="false" />
+        <activity
+            android:name=".PortScanActivity"
+            android:exported="false" />
     </application>
 </manifest>

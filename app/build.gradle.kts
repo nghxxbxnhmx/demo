@@ -104,6 +104,8 @@ dependencies {
 
     //nslookup library
     implementation("dnsjava:dnsjava:3.5.3")
+    //speed test
+    implementation("fr.bmartel:jspeedtest:1.32.1")
 
 
 }
