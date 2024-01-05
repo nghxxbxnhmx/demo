@@ -69,5 +69,4 @@
             android:name=".PortScanActivity"
             android:exported="false" />
     </application>
-
 </manifest>
