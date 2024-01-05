@@ -20,6 +20,21 @@
             android:padding="16dp"
             android:text="hi.fpt.vn" />
 
+        <!-- Port EditText -->
+        <EditText
+            android:id="@+id/editTextPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Port"
+            android:padding="16dp" />
+
+        <!-- TCP Ping Checkbox -->
+        <CheckBox
+            android:id="@+id/checkBoxTcpPing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use TCP Ping" />
+
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -44,10 +59,8 @@
                 android:layout_gravity="fill"
                 android:layout_margin="5dp"
                 android:text="Cancel"
-                android:backgroundTint="@android:color/darker_gray"
-                />
+                android:backgroundTint="@android:color/darker_gray" />
         </GridLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,13 +85,12 @@
                 android:textAlignment="viewEnd" />
         </LinearLayout>
 
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textAlignment="center"/>
+            android:textAlignment="center" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
