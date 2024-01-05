@@ -34,15 +34,6 @@ public class PortScanActivity extends AppCompatActivity {
     private PortScanTask portScanTask;
 
     private static final int PROGRESS_UPDATE_INTERVAL = 10;
-//    private final Handler progressHandler = new Handler(new Handler.Callback() {
-//        @Override
-//        public boolean handleMessage(Message msg) {
-//            int progress = msg.what;
-//            progressBar.setProgress(progress);
-//            progressText.setText(progress + "%");
-//            return true;
-//        }
-//    });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

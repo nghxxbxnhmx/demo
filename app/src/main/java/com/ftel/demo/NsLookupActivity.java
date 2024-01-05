@@ -70,7 +70,7 @@ public class NsLookupActivity extends AppCompatActivity {
             try {
                 // Perform DNS query
                 Resolver resolver = new SimpleResolver(dnsServer);
-                Lookup lookup = new Lookup(domainName, Type.ANY);
+                Lookup lookup = new Lookup(domainName, Type.A);
                 lookup.setResolver(resolver);
 
                 Record[] records = lookup.run();
