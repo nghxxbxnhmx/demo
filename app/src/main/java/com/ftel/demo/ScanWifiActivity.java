@@ -31,6 +31,7 @@ public class ScanWifiActivity extends AppCompatActivity {
     private TextView textView;
     private ConnectivityManager connectivityManager;
     private WifiManager wifiManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,16 +69,15 @@ public class ScanWifiActivity extends AppCompatActivity {
             DataInfo wifiInfo = new DataInfo();
             wifiInfo.ssid = i.SSID;
             wifiInfo.signalLevel = i.level;
-
             data.add(wifiInfo);
         }
-        //textView.setText(gson.toJson(data));
-        textView.setText(gson.toJson(scanResults));
-        Log.i("RESULT: ",gson.toJson(scanResults));
+        textView.setTextSize(18f);
+        textView.setText(gson.toJson(data));
+        //textView.setText(gson.toJson(scanResults));
     }
 
     public static class DataInfo {
         String ssid;
-        int signalLevel;
+        long signalLevel;
     }
 }

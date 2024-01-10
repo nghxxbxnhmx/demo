@@ -100,10 +100,9 @@ dependencies {
     implementation("com.androidplot:androidplot-core:1.5.10")
     implementation("com.squareup.okhttp:okhttp:2.7.5")
 
-    // implementation("com.github.akinaru:speedtest:1.23")
-
     //nslookup library
     implementation("dnsjava:dnsjava:3.5.3")
+
     //speed test
     implementation("fr.bmartel:jspeedtest:1.32.1")
 

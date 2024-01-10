@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -35,9 +36,7 @@ public class TracertActivity extends AppCompatActivity {
 
         buttonTracert.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                editTextIpAddress.setText("meo meo");
-            }
+            public void onClick(View view) {}
         });
     }
 
